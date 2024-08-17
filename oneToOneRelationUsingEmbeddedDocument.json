@@ -1,0 +1,5 @@
+db.customer.insertOne({name:"Shahd Majdi",age:18,from:["Cairo","Egypt"],contact:{email:"shahd@abc.com",phone:0332444433}})
+
+
+//this is an example of a one(collection) to one(collection) relationship using embedded documents. 
+//we use embedded document in this approach

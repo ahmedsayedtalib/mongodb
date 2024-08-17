@@ -1,0 +1,32 @@
+db.customer.insertMany([ //This is the embedded document way
+    {
+        name:"Ahmed Sayed",
+        age:37,
+        from:["Dongola","Sudan"],
+        contact:{email:"ahmedsayed@abc.com", phone: 0912330812},
+        address:{street:"Alkasa",House:"Daleel",PIN:11111,city:"Dongola",country:"Sudan"}
+    },
+{
+    name:"Majdi Hamadelneel",
+        age:53,
+        from:["Cairo","Egypt"],
+        contact:{email:"majdithethief@abc.com", phone: 01130000232},
+        address:{street:"Ahmed Urabi",House:"building 92",PIN:22200,city:"Cairo",country:"Egypt"}
+
+}])//this is an example of a one(collection) to one(collection) relationship using References. 
+//we use embedded document in this approach
+
+
+// Update Ahmed Sayed's address
+db.customer.updateMany( // this is the reference way, this saves time and performance when querying a db that has large amount of data
+    { name: "Ahmed Sayed" },
+    { $set: { address: ObjectId('66c0cba74c548e55d083874a') } }
+);
+
+// Update Majdi Hamadelneel's address
+db.customer.updateMany(
+    { name: "Majdi Hamadelneel" },
+    { $set: { address: ObjectId('66c0cba74c548e55d083874b') } }
+);
+//when using the refence approach, we connect 2 collections(similar to 2 tables for SQL)//
+ 

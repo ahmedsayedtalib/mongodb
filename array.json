@@ -1,0 +1,149 @@
+db.sales.insertMany(
+[
+    {
+        name:"Ahmed",
+        age:48,
+        isMarried: false,
+        subscription:{
+            type:"yearly",
+            renewalDate: {
+                day:23,
+                month:"June",
+                year: 2025
+            },
+            address: ["Dongola","Sudan"],
+            purchase: [
+                {product:"Server",model:"HP",price:3000},
+                {product:"LG TV", price:500}
+            ]
+        }
+    },
+    {name:"Ali",
+    age:22,
+    isMarried: true,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:23,
+            month:"Aug",
+            year: 2026
+        },
+        address: ["Khartoum","Sudan"],
+        purchase: [
+            {product:"Laptop",model:"dell",price:1200},
+            {product:"keyboard", price:30}
+        ]
+    }},
+    {name:"Huda",
+    age:19,
+    isMarried: false,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:6,
+            month:"Sep",
+            year: 2028
+        },
+        address: ["Dubai","UAE"],
+        purchase: [
+            {product:"iPhone",model:"16",price:1300},
+            {product:"Headset", price:160},
+        ]
+    }},
+    {name:"Sara",
+    age:33,
+    isMarried: false,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:12,
+            month:"Apr",
+            year: 2026
+        },
+        address: ["London","UK"],
+        purchase: [
+            {product:"Perfume",model:"Gucci",price:99},
+            {product:"shoes",model:"Nike 993i", price:230}
+        ]
+    }},
+    {name:"Ahmed",
+    age:48,
+    isMarried: false,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:23,
+            month:"June",
+            year: 2025
+        },
+        address: ["Jeddah","KSA"],
+        purchase: [
+            {product:"Samsung phone",model:"s24",price:1370},
+            
+        ]
+    }},
+    
+    {name:"Mohammed",
+    age:31,
+    isMarried: true,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:8,
+            month:"May",
+            year: 2030
+        },
+        address: ["Ottawa","Canada"],
+        purchase: [
+            {product:"T-shirt",model:"POLO",price:180},
+            {product:"LG TV", price:500}
+        ]
+    }},{name:"Mohammed",
+    age:31,
+    isMarried: true,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:8,
+            month:"May",
+            year: 2030
+        },
+        address: ["Ottawa","Canada"],
+        purchase: [
+            {product:"T-shirt",model:"POLO",price:180},
+            {product:"LG TV", price:500}
+        ]
+    }},
+    {name:"Ameer",
+    age:30,
+    isMarried: true,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:8,
+            month:"May",
+            year: 2030
+        },
+        address: ["Ottawa","Canada"],
+        purchase: [
+            {product:"T-shirt",model:"POLO",price:180},
+            {product:"LG TV", price:500}
+        ]
+    }},
+    {name:"Hiba",
+    age:24,
+    isMarried: false,
+    subscription:{
+        type:"monthly",
+        renewalDate: {
+            day:8,
+            month:"May",
+            year: 2030
+        },
+        address: ["Ottawa","Canada"],
+        purchase: [
+            {product:"iPhone",model:"POLO",price:180},
+            {product:"LG TV", price:500}
+        ]
+    }}
+    ])
