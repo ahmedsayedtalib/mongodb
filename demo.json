@@ -72,3 +72,7 @@ db.demo.insertMany(
         },
     }},
     ])
+
+    // to access a nested document for query we should access the parent key first. example:-
+    db.demo.find({"subscription.renewalDate.year":2026}) // will return all 2026 subscriptions. 
+    //notice we had to access subscription then renewalDate then year, because year is inside a nested document
