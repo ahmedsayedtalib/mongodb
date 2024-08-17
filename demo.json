@@ -78,3 +78,5 @@ db.demo.insertMany(
     //notice we had to access subscription then renewalDate then year, because year is inside a nested document
 
     b.demo.updateOne({name:"Sara"},{$set:{"subscription.renewalDate.day":15}})//update the value of day
+
+    typeof db.demo.findOne().subscription.renewalDate.month //query of a nested document datatype
