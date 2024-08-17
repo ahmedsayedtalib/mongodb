@@ -1,0 +1,74 @@
+//embedded documents: Subscription field is the embedded document(document inside a document).
+//embedded document can have a hundred levels of nested documents.
+// the maximum size of a document must not exceed 16MB.
+db.demo.insertMany(
+[
+    {
+        name:"Ahmed",
+        age:48,
+        isMarried: false,
+        subscription:{
+            type:"yearly",
+            renewalDate: {
+                day:23,
+                month:"June",
+                year: 2025
+            }
+        }
+    },
+    {name:"Ali",
+    age:22,
+    isMarried: true,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:23,
+            month:"Aug",
+            year: 2026
+        }
+    }},
+    {name:"Huda",
+    age:19,
+    isMarried: false,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:6,
+            month:"Sep",
+            year: 2028
+        }
+    }},
+    {name:"Sara",
+    age:33,
+    isMarried: false,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:12,
+            month:"Apr",
+            year: 2026
+        }
+    }},
+    {name:"Ahmed",
+    age:48,
+    isMarried: false,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:23,
+            month:"June",
+            year: 2025
+        }
+    }},
+    {name:"Mohammed",
+    age:31,
+    isMarried: true,
+    subscription:{
+        type:"yearly",
+        renewalDate: {
+            day:8,
+            month:"May",
+            year: 2030
+        },
+    }},
+    ])
