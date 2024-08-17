@@ -1,0 +1,52 @@
+db.products.insertMany ([
+    {
+        name:"Samsung s25",
+        price: 1500,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"Apple iPhone 15",
+        price: 1400,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:" HP Laptop",
+        price: 1100,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"Dell Laptop",
+        price: 1230,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"Play Station 5",
+        price: 600,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"xBox x",
+        price: 550,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"xBox One",
+        price: 350,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"PlayStation 4",
+        price: 450,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"LG TV 4K",
+        price: 600,
+        colors: ["black","silver","blue","gold"]
+    },
+    {
+        name:"Samsung TV 4K",
+        price: 710,
+        colors: ["black","silver","blue","gold"]
+    }
+])
