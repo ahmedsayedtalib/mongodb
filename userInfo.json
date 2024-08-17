@@ -1,0 +1,90 @@
+db.employees.insertMany([
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Ahmed Sayed",
+      "gender": "male",
+      "email": "ahmedsayed747@hotmail.com",
+      "job": "IT Admin",
+      "salary": 17000
+    },
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Mohamed Elfadil",
+      "gender": "male",
+      "email": "mbmbmf_11@hotmail.com",
+      "job": "IT support engineer",
+      "salary": 11000
+    },
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Ali Mohamed",
+      "gender": "male",
+      "email": "ali_mohamed_777@hotmail.com",
+      "job": "Database admin",
+      "salary": 9000
+    },
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Saad Adil",
+      "gender": "male",
+      "email": "adombo@hotmail.com",
+      "job": "HR Assistant",
+      "salary": 8500
+    },
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Omer Awad",
+      "gender": "male",
+      "email": "o_awad1213@hotmail.com",
+      "job": "HR Manager",
+      "salary": 17000
+    },
+    {
+      _id: getNextSequence("employeeId"),
+      "name": "Ammar Hamid",
+      "gender": "male",
+      "email": "ammar_hamid_1889@hotmail.com",
+      "job": "Network Administrator",
+      "salary": 13500
+    },
+    {
+        _id: getNextSequence("employeeId"),
+        "name": "Mona Mohammed",
+        "gender": "female",
+        "email": "mona_jadallah@hotmail.com",
+        "job": "Pharmacist",
+        "salary": 13500
+      },
+      {
+        _id: getNextSequence("employeeId"),
+        "name": "Sara Awad",
+        "gender": "female",
+        "email": "sara_awad_161616@hotmail.com",
+        "job": "Business Administrator",
+        "salary": 6500
+      },
+      {
+        _id: getNextSequence("employeeId"),
+        "name": "Hiba Ameer",
+        "gender": "female",
+        "email": "ahiba@hotmail.com",
+        "job": "Electical Engineer",
+        "salary": 8000
+      },
+      {
+        _id: getNextSequence("employeeId"),
+        "name": "Amal Yahya",
+        "gender": "female",
+        "email": "amal@hotmail.com",
+        "job": "Nurse",
+        "salary": 4000
+      },
+      {
+        _id: getNextSequence("employeeId"),
+        "name": "Maha Babikir",
+        "gender": "female",
+        "email": "maha1995@hotmail.com",
+        "job": "Architect",
+        "salary": 5500
+      },
+]);
