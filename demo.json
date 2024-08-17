@@ -20,7 +20,7 @@ db.demo.insertMany(
     age:22,
     isMarried: true,
     subscription:{
-        type:"yearly",
+        type:"monthly",
         renewalDate: {
             day:23,
             month:"Aug",
@@ -42,7 +42,7 @@ db.demo.insertMany(
     age:33,
     isMarried: false,
     subscription:{
-        type:"yearly",
+        type:"monthly",
         renewalDate: {
             day:12,
             month:"Apr",
@@ -64,7 +64,7 @@ db.demo.insertMany(
     age:31,
     isMarried: true,
     subscription:{
-        type:"yearly",
+        type:"monthly",
         renewalDate: {
             day:8,
             month:"May",
