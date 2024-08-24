@@ -1,0 +1,31 @@
+db.products.insertMany([{
+    _id:102,
+    name: "Shirt",
+    color:"blue",
+    price:40
+},
+{
+    _id:103,
+    name: " Nicon Camera",
+    color:"white",
+    price:120
+},
+{
+    _id:104,
+    name: "Fridge",
+    color:"silver",
+    price:450
+},
+{
+    _id:402,
+    name: "Shoes",
+    color:"brown",
+    price:210
+},
+{
+    _id:302,
+    name: "Bed",
+    color:"green",
+    price:435
+}]
+)

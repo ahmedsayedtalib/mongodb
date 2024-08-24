@@ -1,0 +1,71 @@
+db.orders.insertOne({_id:1,date: new Date('03-02-2011'),pId:[123,456]})
+db.orders.insertOne({_id:2,date: new Date('04-02-2011'),pId:[123,789]})
+db.orders.insertOne({_id:3,date: new Date('22-09-2018'),pId:[414,789,234]})
+db.orders.insertOne({_id:4,date: new Date('15-08-2019'),pId:[528]})
+//orden numbers cannot be duplicated, pId(product ID can be)
+db.orders.find()
+[
+  {
+    _id: 1,
+    date: ISODate('2011-03-01T22:00:00.000Z'),
+    pId: [ 123, 456 ]
+  },
+  {
+    _id: 2,
+    date: ISODate('2011-04-01T22:00:00.000Z'),
+    pId: [ 123, 789 ]
+  },
+  {
+    _id: 3,
+    date: ISODate('1970-01-01T00:00:00.000Z'),
+    pId: [ 414, 789, 234 ]
+  },
+  { _id: 4, date: ISODate('1970-01-01T00:00:00.000Z'), pId: [ 528 ] }
+////////////////////////////////////////////////////////////////////////////////
+
+db.customer.find()
+[ //on the customer collection, only the order number should appear
+  {
+    _id: ObjectId('66c0c7724c548e55d0838748'),
+    name: 'Ahmed Sayed',
+    age: 37,
+    contact: { email: 'ahmedsayed@abc.com', phone: 912330812 },
+    address: ObjectId('66c0cba74c548e55d083874a'),
+    purchases: [
+      ObjectId('66c0e647c7fe125308838726'),
+      ObjectId('66c0e647c7fe12530883872b')
+    ]
+  },
+  {
+    _id: ObjectId('66c0c7724c548e55d0838749'),
+    name: 'Mohamed Elfadil',
+    age: 40,
+    contact: { email: 'mbmd1@hotmail.com', phone: 18057812 },
+    address: ObjectId('66c0cba74c548e55d083874b')
+  },
+  {
+    _id: ObjectId('66c1f2a1861a47fdfc838726'),
+    name: 'John',
+    age: 28,
+    contact: { email: 'john@abc.com', phone: 9224223433 },
+    address: ObjectId('66c0cba74c548e55d083874a'),
+    paymentMethod: [
+      { cardNo: 123456789123456, expiry: '04/2027' },
+      { cardNo: 987654321987654, expiry: '05/2029' }
+    ],
+    orders: [ 3 ]
+  },
+  {
+    _id: ObjectId('66c1f2a1861a47fdfc838727'),
+    name: 'Jamal',
+    age: 31,
+    contact: { email: 'jaja@abc.com', phone: 92243534533 },
+    address: ObjectId('66c0cba74c548e55d083874a'),
+    paymentMethod: { cardNo: 3857395033246832, expiry: '04/2025' },
+    orders: [ 1, 2, 4 ]
+//when using many to many relationships between collections it is recommended to use reference approach. 
+//There are several drwabacks when using embedded approach such as:-
+//1- a document can exceed the maximum size of the 16MB per document, because an order might have multiple
+//product documents which can easily exceed the 16MB size.
+//2- can have a duplicate and redundant data.
+//3- if any product property changes, it needs to be updated at multiple places.
